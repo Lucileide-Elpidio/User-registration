@@ -1,4 +1,5 @@
-import React, { useRef, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
+import axios from "axios"
 import People from "./assets/people.svg"
 import Arrow from "./assets/arrow.svg"
 import Trash from "./assets/bin.svg"
@@ -10,8 +11,27 @@ function App() {
   const inputName = useRef()
   const inputAge = useRef()
 
-  function addNewUser() {
-    setUsers([...users, { id: Math.random(), name: inputName.current.value, age: inputAge.current.value }])
+ async function addNewUser() {
+
+  const {data:newUser}= await axios.post("http://localhost:3000/users",{name:inputName.current.value,
+   age:inputAge.current.value,})
+
+   setUsers([...users, newUser])
+   
+  }
+
+  useEffect(()=>{
+async function fetchUser(){
+  const {data:newUser}= await axios.get("http://localhost:3000/users")
+  setUsers(newUser)
+  }
+  fetchUser()
+  },[])
+
+ async function deletUser(userId){
+  await axios.delete(`http://localhost:3000/users/${userId}`)
+const newUser=users.filter(user=> user.id !== userId)
+setUsers(newUser)
   }
 
   return (<Container>
@@ -29,8 +49,8 @@ function App() {
       <ul>
         {users.map((user) => (
           <User key={user.id}>
-            <p>{user.inputName}</p>   <p>{user.inputAge}</p>
-            <button> <img src={Trash} />  </button>
+            <p>{user.name}</p>   <p>{user.age}</p>
+            <button onClick={()=>deletUser(user.id)}> <img src={Trash} />  </button>
           </User>
 
         ))

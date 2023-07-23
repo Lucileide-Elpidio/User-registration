@@ -57,7 +57,7 @@ border:none;
 outline:none;
 color: #88049F;
 font-size: 20px;
-font-weight: 400;
+font-weight: 900;
 line-height: 28px;
 
 `
@@ -103,12 +103,12 @@ outline:none;
 p {
     color: #88049F;
 font-size: 20px;
-font-weight: 400;
+font-weight: 900;
 line-height: 28px;
 }
 
 button{
-    backgroun:none;
+    background:none;
     border:none;
     cursor:pointer;
 }
