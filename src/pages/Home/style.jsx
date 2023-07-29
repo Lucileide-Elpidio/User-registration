@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import Background from "./assets/bg1.svg"
+import Background from "../../assets/bg1.svg"
 
 export const Container = styled.div`
 height:100vw;
@@ -11,30 +11,22 @@ align-items:center;
 gap:40px;
 
 
-`
+`;
 
 export const Image = styled.img`
 margin-top:30px;
 
-`
+`;
 export const ContainerItems = styled.div`
 background: linear-gradient(157.44deg, rgba(255, 255, 255, 0.6) 0.84%, rgba(255, 255, 255, 0.6) 0.85%, rgba(255, 255, 255, 0.15) 100%);
-border-radius: 61px 61px;
+border-radius: 61px 61px 0px 0px;
 padding:50px 36px;
 display:flex;
 flex-direction:column;
-height:500px;
+height:100%;
+min-heigth:calc(100vh-170px);
+`;
 
-`
-export const H1 = styled.h1`
-font-size: 34px;
-font-weight: 700;
-line-height: 40px;
-text-align: center;
-color: #88049F;
-
-
-`
 export const InputLabel = styled.p`
 color: #88049F;
 font-size: 18px;
@@ -43,7 +35,7 @@ line-height: 22px;
 text-align: left;
 margin-left:25px;
 
-`
+`;
 
 export const Input = styled.input`
 box-shadow: 0px 4px 4px 0px #00000040;
@@ -60,9 +52,9 @@ font-size: 20px;
 font-weight: 900;
 line-height: 28px;
 
-`
-export const Button = styled.button`
-background: #10002B;
+`;
+export const ContainerButton = styled.button`
+background:  #10002B;
 width: 342px;
 height: 74px;
 margin-top:100px;
@@ -86,33 +78,11 @@ cursor: pointer;
         opacity:0.5;
     }
 
-`
-export const User = styled.li`
-display:flex;
-justify-content:space-around;
-align-items:center;
-box-shadow: 0px 4px 4px 0px #00000040;
-background: #FFFFFF40;
-width: 342px;
-height: 58px;
-margin-top: 20px;
-border-radius: 14px;
-border:none;
-outline:none;
+    img{
+        transform:rotatey(180deg);
+    }
+`;
 
-p {
-    color: #88049F;
-font-size: 20px;
-font-weight: 900;
-line-height: 28px;
-}
-
-button{
-    background:none;
-    border:none;
-    cursor:pointer;
-}
-`
 
 
 
