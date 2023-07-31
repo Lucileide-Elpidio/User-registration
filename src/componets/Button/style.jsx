@@ -28,4 +28,9 @@ cursor: pointer;
     img{
         transform:${props => props.isBack && `rotatey(180deg)`};
     }
+
+    @media(max-width:991px){
+        width:95%;
+        margin-top:30px;
+    }
     `;

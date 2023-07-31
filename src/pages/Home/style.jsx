@@ -2,7 +2,7 @@ import styled from "styled-components"
 import Background from "../../assets/bg1.svg"
 
 export const Container = styled.div`
-height:100vw;
+height:100vh;
 background: url("${Background}");
 background-size:cover;
 display:flex;
@@ -10,12 +10,14 @@ flex-direction:column;
 align-items:center;
 gap:40px;
 
-
 `;
 
 export const Image = styled.img`
 margin-top:30px;
 
+@media(max-width:991px){
+    width:60%;
+}
 `;
 export const ContainerItems = styled.div`
 background: linear-gradient(157.44deg, rgba(255, 255, 255, 0.6) 0.84%, rgba(255, 255, 255, 0.6) 0.85%, rgba(255, 255, 255, 0.15) 100%);
@@ -52,6 +54,9 @@ font-size: 20px;
 font-weight: 900;
 line-height: 28px;
 
+@media(max-width:991px){
+    width:100%
+}
 `;
 export const ContainerButton = styled.button`
 background:  #10002B;

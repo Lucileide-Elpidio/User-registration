@@ -12,4 +12,8 @@ backdrop-filter:blur(45px);
 min-heigth:calc(100vh-170px);
 `}
 
+@media(max-width:991px){
+width:85%;
+}
+
 `;
