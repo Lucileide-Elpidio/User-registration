@@ -2,7 +2,7 @@ import styled from "styled-components"
 import Background from "../../assets/bg1.svg"
 
 export const Container = styled.div`
-height:100vw;
+height:100vh;
 background: url("${Background}");
 background-size:cover;
 display:flex;
@@ -10,7 +10,7 @@ flex-direction:column;
 align-items:center;
 gap:40px;
 
-@media(min-width:260px){
+@media(min-width:230px){
     height:100vh;
 }
 
