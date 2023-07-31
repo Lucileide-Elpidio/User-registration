@@ -10,8 +10,8 @@ flex-direction:column;
 align-items:center;
 gap:40px;
 
-@media(max-width:991px){
-    height:100vw;
+@media(min-width:260px){
+    height:100vh;
 }
 
 `;
