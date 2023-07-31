@@ -10,6 +10,10 @@ flex-direction:column;
 align-items:center;
 gap:40px;
 
+@media(max-width:991px){
+    height:100vw;
+}
+
 `;
 
 export const Image = styled.img`
