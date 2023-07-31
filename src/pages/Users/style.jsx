@@ -2,7 +2,7 @@ import styled from "styled-components"
 import Background from "../../assets/bg2.svg"
 
 export const Container = styled.div`
-height:100vh;
+height:100vw;
 background: url("${Background}");
 background-size:cover;
 display:flex;
