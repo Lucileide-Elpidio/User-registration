@@ -11,7 +11,7 @@ align-items:center;
 gap:40px;
 
 @media(max-width:991px){
-    height:100vw;
+    height:100%;
 }
 `;
 
