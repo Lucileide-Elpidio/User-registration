@@ -10,7 +10,7 @@ flex-direction:column;
 align-items:center;
 gap:40px;
 
-@media(min-width:230px){
+@media(max-width:991px){
     height:100vh;
 }
 
